@@ -8,7 +8,7 @@ public class StrategyExample {
 
     public void useEnum(StatusEnumWithStrategy status) {
         Class<? extends StatusStrategy> strategy = status.getStatusStrategy();
-        System.out.println("Load bean of strategy "+strategy+" from application context and execute.");
+        System.out.println("Load bean of strategy "+strategy+" from application context and execute. Show status in color "+status.getColor());
     }
 
 }

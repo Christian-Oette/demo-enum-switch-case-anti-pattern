@@ -1,22 +1,24 @@
 package com.christianoette.examples;
 
+import com.christianoette.status.Color;
 import com.christianoette.status.StatusEnumNotRefactoringSafe;
 
+@SuppressWarnings("SameParameterValue")
 public class AntipatternExample {
 
     public void useEnum(StatusEnumNotRefactoringSafe status) {
         switch(status) {
-            case SUCCESS -> process();
-            case ERROR -> sendEMail();
+            case SUCCESS -> showSuccess(Color.GREEN);
+            case ERROR -> sendEMailAndShowError(Color.RED);
             default -> throw new IllegalStateException("Not implemented yet. Unknown state "+status);
         }
     }
 
-    private void sendEMail() {
-        System.out.println("Send E-Mail");
+    private void sendEMailAndShowError(Color color) {
+        System.out.println("Send E-Mail and show error in color "+color);
     }
 
-    private void process() {
-        System.out.println("Process");
+    private void showSuccess(Color color) {
+        System.out.println("Show success in color "+color);
     }
 }

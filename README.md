@@ -1,9 +1,9 @@
-# Example project to show the switch case antipattern on enums
+# Example project to demonstrate an anti-pattern on enums
 
 If you use switch case on enums, your compiler and tests won't recognice a need for code change.
 In this demo project I show two alternatives.
 
-See blog post for more information (COMING SOON). 
+See blog post for a full explanation 
 
 ## Anti pattern example
 

@@ -5,19 +5,19 @@ import com.christianoette.examples.strategies.StatusStrategy;
 import com.christianoette.examples.strategies.SuccessStrategy;
 
 public enum StatusEnumWithStrategy {
-    ERROR("red", ErrorStrategy.class),
+    ERROR(Color.RED, ErrorStrategy.class),
     // PROCESSING(),
-    SUCCESS("green", SuccessStrategy.class);
+    SUCCESS(Color.GREEN, SuccessStrategy.class);
 
-    private final String color;
+    private final Color color;
     private final Class<? extends StatusStrategy> statusStrategy;
 
-    StatusEnumWithStrategy(String color, Class<? extends StatusStrategy> strategy) {
+    StatusEnumWithStrategy(Color color, Class<? extends StatusStrategy> strategy) {
         this.color = color;
         this.statusStrategy = strategy;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 

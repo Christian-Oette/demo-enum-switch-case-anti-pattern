@@ -1,17 +1,16 @@
 package com.christianoette.status;
 
 public enum StatusEnum {
-    ERROR("red"),
-    // PROCESSING(),
-    SUCCESS("green");
+    ERROR(Color.RED),
+    //PROCESSING(),
+    SUCCESS(Color.GREEN);
 
-    private final String color;
+    private final Color color;
 
-    StatusEnum(String color) {
+    StatusEnum(Color color) {
         this.color = color;
     }
-
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 }

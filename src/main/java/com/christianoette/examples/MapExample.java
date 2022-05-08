@@ -9,19 +9,19 @@ import java.util.function.Consumer;
 public class MapExample {
 
     Map<StatusEnum, Consumer<StatusEnum>> strategies =Map.of(
-            StatusEnum.ERROR, this::sendEMail,
-            StatusEnum.SUCCESS, this::process
+            StatusEnum.SUCCESS, this::showSuccess,
+            StatusEnum.ERROR, this::sendEMailAndShowError
     );
 
     public void useEnum(StatusEnum status) {
         strategies.get(status).accept(status);
     }
 
-    private void sendEMail(StatusEnum status) {
-        System.out.println("Send E-Mail. Show status in color "+status.getColor());
+    private void sendEMailAndShowError(StatusEnum status) {
+        System.out.println("Send E-Mail. Show status in color "+status.getColor().name());
     }
 
-    private void process(StatusEnum status) {
-        System.out.println("Process and show status in color"+status.getColor());
+    private void showSuccess(StatusEnum status) {
+        System.out.println("Process and show status in color"+status.getColor().name());
     }
 }
