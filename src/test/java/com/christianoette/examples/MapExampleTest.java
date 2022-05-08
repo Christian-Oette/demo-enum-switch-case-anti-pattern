@@ -5,6 +5,7 @@ import com.christianoette.status.StatusEnum;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
@@ -26,6 +27,7 @@ public class MapExampleTest {
     @Test
     public void makeSureAllStatusesAreHandled() {
         Set<StatusEnum> allMappedStatuses = new MapExample().strategies.keySet();
-        assertThat(allMappedStatuses).containsAll(Arrays.asList(StatusEnum.values()));
+        List<StatusEnum> allPossibleValues = Arrays.asList(StatusEnum.values());
+        assertThat(allMappedStatuses).containsAll(allPossibleValues);
     }
 }
