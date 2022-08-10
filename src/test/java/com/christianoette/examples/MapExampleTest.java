@@ -1,6 +1,5 @@
 package com.christianoette.examples;
 
-import com.christianoette.examples.MapExample;
 import com.christianoette.status.StatusEnum;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MapExampleTest {
 
