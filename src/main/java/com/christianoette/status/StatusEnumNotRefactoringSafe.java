@@ -2,6 +2,6 @@ package com.christianoette.status;
 
 public enum StatusEnumNotRefactoringSafe {
     ERROR,
-    // PROCESSING,
+    PROCESSING,
     SUCCESS
 }

@@ -2,10 +2,6 @@ package com.christianoette.examples;
 
 public class InstanceOfExample {
 
-
-
-
-
     static abstract sealed class Shape permits Circle, Rectangle/*, Triangle*/ {
 
     }
